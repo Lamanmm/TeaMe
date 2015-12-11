@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="js/index.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Teams</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+   <!-- <p>Welcome!</p> -->
+    <a href="#pagetwo" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add a team</a>
+    <!-- <a href="#" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left">Plus Icon</a> -->
+  </div>
+
+  <!--<div data-role="footer">
+    <h1>Footer Text</h1>
+  </div> -->
+</div> 
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>Create a new team</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+   <!-- <p>Goodbye!</p> -->
+   <!-- <a href="#pageone" class="ui-btn">Cancel</a> -->
+   <form methof="post" action="demoform.asp">
+    <label for="teamname">Enter team name:</label>
+    <input type="text" name="teamname" id="teamname" placeholder="Team name..." data-clear-btn="true">
+
+   <!-- <input type="button" value="Submit Button"> -->
+
+   <a href="#pagethree" class="ui-btn ui-btn-inline">Done</a>
+   <a href="#" class="ui-btn ui-btn-inline" data-rel="back">Cancel</a>
+ </form>
+
+ </div>
+
+  <!--<div data-role="footer">
+    <h1>Footer Text</h1>
+  </div> -->
+</div> 
+
+
+<div data-role="page" id="pagethree">
+  <div data-role="header">
+    <h1>Select contacts</h1>
+  </div>
+
+ <div data-role="main" class="ui-content">
+
+  <!--<form class="ui-filterable">
+    <input id="myFilter" data-type="search" placeholder="Search for names..">
+  </form>
+
+  <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true"> -->
+
+    <form methof="post" action="demoform.asp"> 
+      <fieldset data-role="controlgroup"> 
+      <legend>Choose contacts to add to the team:</legend>
+      <!-- <label for="selectcontacts">Contacts</label> -->
+
+      <label for="1">Anna</label>
+      <input type="checkbox" name="contacts" id="1" value="1">
+
+      <label for="2">Adam</label>
+      <input type="checkbox" name="contacts" id="2" value="2">
+
+      <label for="3">Alex</label>
+      <input type="checkbox" name="contacts" id="3" value=""2>
+
+      <label for="4">Charlie</label>
+      <input type="checkbox" name="contacts" id="4" value="4">
+
+      <label for="5">Chloe</label>
+      <input type="checkbox" name="contacts" id="5" value="5">
+
+      <label for="6">Danielle</label>
+      <input type="checkbox" name="contacts" id="6" value="6">
+
+      <label for="7">David</label>
+      <input type="checkbox" name="contacts" id="7" value="7">
+
+      <label for="8">Freya</label>
+      <input type="checkbox" name="contacts" id="8" value="8">
+
+      <label for="9">Florence</label>
+      <input type="checkbox" name="contacts" id="9" value="9">
+
+      <!-- <input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true"> -->  
+      <input type="submit" data-inline="true" value="Submit & Go ">
+      <a href="#pageone" class="ui-btn ui-btn-inline">Submit</a> 
+      <a href="#" class="ui-btn ui-btn-inline" data-rel="back">Cancel</a>
+
+    </form>
+  </div> 
+</div>
+
+</body>
+</html>
